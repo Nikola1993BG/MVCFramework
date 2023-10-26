@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div style="text-align:center">
+    <div><h1>TASK {{task[0].id}}</h1></div>
+
+    <div><h2>{{task[0].name}}</h2></div>
+
+    <div><h3>{{task[0].description}}</h3></div>
+    <div><h3>{{task[0].long_description}}</h3></div>
+
+    <button type="submit" class="btn btn-primary" onClick="location.href='/tasks/update/{{task[0].id}}'">Edit</button>
+    <button type="submit" class="btn btn-primary" onClick="location.href='/tasks/delete/{{task[0].id}}'">Delete</button>
+
+</div>
+{% endblock %}

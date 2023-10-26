@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div>
+        <form method="post" action="/tasks/update/{{id}}">
+            <div class="form-group">
+            <label for="taskName">Task Name</label>
+            <input type="line" class="form-control" id="taskName" name="name" placeholder="Task Name" value="{{name}}">
+            <small id="taskHelp" class="form-text text-muted">Specify the name of the task.</small>
+            </div>
+            <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Description" rows="3">{{description}}</textarea>
+            </div>
+            <div class="form-group">
+            <label for="long_description">Long Description</label>
+            <textarea class="form-control" id="long_description" name="long_description" placeholder="Long Description" rows="5">{{long_description}}</textarea>
+            </div>
+            <div class="form-check">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
